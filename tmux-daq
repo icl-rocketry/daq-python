@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Creates tmux splitting 3x2|2x1
+#TODO split into 3x2|1
+tmux new-session \; \
+split-window -v -p 66\; \
+split-window -h -p 66\; \
+split-window -h -p 50\; \
+split-window -v \; \
+select-pane -t 1 \; \
+split-window -v \; \
+select-pane -t 3 \; \
+split-window -v \; \
+select-pane -t 0 \; \
+split-window -h -p 66 \; \
+#split-window -h -p 50 \; \
